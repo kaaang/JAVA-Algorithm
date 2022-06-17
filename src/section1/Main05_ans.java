@@ -6,25 +6,29 @@ public class Main05_ans {
 
 
     public String solution(String str){
-        char[] arr = str.toCharArray();
+        String answer;
+
+        char[] s = str.toCharArray();
         int lt = 0;
         int rt = str.length()-1;
 
         while (lt<rt){
-            if(Character.isLetter(arr[lt]) && Character.isLetter(arr[rt])){
-                char tmp = arr[lt];
-                arr[lt] = arr[rt];
-                arr[rt] = tmp;
+            if(!Character.isAlphabetic(s[lt])){
                 lt++;
+            }else if(!Character.isAlphabetic(s[rt])){
                 rt--;
-            }else if(!Character.isLetter(arr[lt])){
+            }else{
+                char tmp = s[lt];
+                s[lt] = s[rt];
+                s[rt] = tmp;
                 lt++;
-            }else if(!Character.isLetter(arr[rt])){
                 rt--;
             }
         }
 
-        return String.valueOf(arr);
+        answer = String.valueOf(s);
+
+        return answer;
     }
 
 
