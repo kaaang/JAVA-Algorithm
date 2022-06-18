@@ -17,7 +17,7 @@ public class Main {
 //        String str = kb.next();
 //
 //
-//        System.out.println(T.solution());
+//        System.out.println(T.solution(str));
 //    }
 
 
