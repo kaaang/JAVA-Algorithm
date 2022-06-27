@@ -1,22 +1,22 @@
 package section7;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Main01 {
+public class Main02 {
 
 
     public void DFS(int n){
-        if(n == 0){
-            return;
+        if(n > 0){
+            DFS(n/2);
+            System.out.print(n%2);
         }else{
-            DFS(n-1);
-            System.out.print(n + " ");
+            return;
         }
     }
 
 
     public static void main(String[] args) {
-        Main01 T = new Main01();
+        Main02 T = new Main02();
         Scanner kb = new Scanner(System.in);
 
         int n = kb.nextInt();
