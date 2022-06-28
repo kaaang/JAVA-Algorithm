@@ -1,8 +1,6 @@
 package study.section8;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 /*
 
@@ -10,35 +8,25 @@ import java.util.Scanner;
 
 public class Main15 {
 
-    static int n;
-    static int[] dx = {-1,-1,0,1,1,1,0,-1};
-    static int[] dy = {0,1,1,1,0,-1,-1,-1};
-    static int answer=0;
-    Queue<Point> queue = new LinkedList<>();
+    static int n, m, len, answer = Integer.MAX_VALUE;
+    static int[] combi;
+    static ArrayList<Point> pz, hs;
 
-    public void BFS(int x, int y, int[][] board){
-        queue.add(new Point(x, y));
-        while (!queue.isEmpty()){
-            Point pos = queue.poll();
-            for(int i=0; i<8;i++){
-                int nx = pos.x+dx[i];
-                int ny = pos.y+dy[i];
-                if(nx>=0 && nx <n && ny>=0 && ny<n && board[nx][ny] == 1){
-                    board[nx][ny] = 0;
-                    queue.add(new Point(nx, ny));
+    public void DFS(int L, int s){
+        if(L == m){
+            int sum = 0;
+            for(Point h : hs){
+                int dis = Integer.MAX_VALUE;
+                for(int i : combi){
+                    dis = Math.min(dis, Math.abs(h.x-pz.get(i).x) + Math.abs(h.y-pz.get(i).y));
                 }
+                sum += dis;
             }
-        }
-    }
-
-    public void solution(int[][] board){
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(board[i][j] == 1){
-                    board[i][j] = 0;
-                    BFS(i,j,board);
-                    answer++;
-                }
+            answer = Math.min(sum, answer);
+        }else{
+            for(int i=s;i<len;i++){
+                combi[L] = i;
+                DFS(L+1, i+1);
             }
         }
     }
@@ -49,13 +37,19 @@ public class Main15 {
         Scanner kb = new Scanner(System.in);
 
         n = kb.nextInt();
-        int[][] arr = new int[n][n];
+        m = kb.nextInt();
+        pz = new ArrayList<>();
+        hs = new ArrayList<>();
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                arr[i][j] = kb.nextInt();
+                int tmp = kb.nextInt();
+                if(tmp == 1) hs.add(new Point(i,j));
+                else if(tmp == 2) pz.add(new Point(i, j));
             }
         }
-        T.solution(arr);
+        len = pz.size();
+        combi = new int[m];
+        T.DFS(0,0);
         System.out.println(answer);
 
     }
