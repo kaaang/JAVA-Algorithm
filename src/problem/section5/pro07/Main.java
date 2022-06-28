@@ -1,6 +1,6 @@
 package problem.section5.pro07;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
