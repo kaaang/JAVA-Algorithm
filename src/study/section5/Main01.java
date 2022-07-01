@@ -60,6 +60,7 @@ public class Main01 {
                     return "NO";
                 }else{
                     stack.pop();
+
                 }
             }
         }

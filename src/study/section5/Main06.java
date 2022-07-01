@@ -47,6 +47,7 @@ public class Main06 {
             }
             Q.poll();
 
+
             if(Q.size() == 1){
                 answer = Q.poll();
             }
