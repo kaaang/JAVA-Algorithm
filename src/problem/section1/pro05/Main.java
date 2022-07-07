@@ -8,29 +8,25 @@ public class Main {
     public String solution(String str){
         String answer = "";
 
+        char[] check = str.toCharArray();
         int lt = 0;
-        int rt = str.length()-1;
-
-        char[] word = str.toCharArray();
-
-        while (lt<rt){
-            if(Character.isAlphabetic(word[lt]) && Character.isAlphabetic(word[rt])){
-                char tmp = word[lt];
-                word[lt] = word[rt];
-                word[rt] = tmp;
+        int rt = check.length-1;
+        while (lt<=rt){
+            if(Character.isAlphabetic(check[lt]) && Character.isAlphabetic(check[rt])){
+                char tmp = check[lt];
+                check[lt] = check[rt];
+                check[rt] = tmp;
                 lt++;
                 rt--;
-            }else{
-                if(!Character.isAlphabetic(word[lt])){
-                    lt++;
-                }
-                if(!Character.isAlphabetic(word[rt])){
-                    rt--;
-                }
+            }else if(!Character.isAlphabetic(check[lt])){
+                lt++;
+            }else if(!Character.isAlphabetic(check[rt])){
+                rt--;
             }
         }
 
-        answer = String.valueOf(word);
+        answer = String.valueOf(check);
+
 
         return answer;
     }

@@ -9,12 +9,11 @@ public class Main {
         String answer = "";
 
         for(char x : str.toCharArray()){
-            if(x >= 97){
-                x -= 32;
+            if(Character.isLowerCase(x)){
+                answer+=Character.toUpperCase(x);
             }else{
-                x += 32;
+                answer+=Character.toLowerCase(x);
             }
-            answer += x;
         }
 
         return answer;

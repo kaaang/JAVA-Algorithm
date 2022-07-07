@@ -17,25 +17,7 @@ public class Main {
 
     public int solution(int n, int m, int[] arr){
         int answer = 0;
-        Queue<Person> q = new LinkedList<>();
-        for(int i=0;i<n;i++){
-            q.offer(new Person(i, arr[i]));
-        }
 
-        while (!q.isEmpty()){
-            Person tmp = q.poll();
-            for(Person x : q){
-                if(x.priority>tmp.priority){
-                    q.offer(tmp);
-                    tmp = null;
-                    break;
-                }
-            }
-            if(tmp != null){
-                answer++;
-                if(tmp.id == m) return answer;
-            }
-        }
 
         return answer;
     }

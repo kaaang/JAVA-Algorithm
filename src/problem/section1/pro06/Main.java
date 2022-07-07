@@ -8,21 +8,10 @@ public class Main {
     public LinkedHashSet<Character> solution(String str){
         LinkedHashSet<Character> answer = new LinkedHashSet<>();
 
-        char[] tmp = str.toCharArray();
-        for(char x : tmp){
+        for(char x : str.toCharArray()){
             answer.add(x);
         }
 
-        return answer;
-    }
-
-    public String solution2(String str){
-        String answer="";
-        for(int i=0; i<str.length(); i++){
-//            System.out.println(str.charAt(i)+" "+i+" "+str.indexOf(str.charAt(i)));
-            //indexOf(str.charAt(i)) 는 가장 앞에 있는 문자를 리턴하는듯
-            if(str.indexOf(str.charAt(i))==i) answer+=str.charAt(i);
-        }
         return answer;
     }
 

@@ -17,15 +17,15 @@ public class Main {
 
 
     public void DFS(Node root){
-        if(root == null){
-            return;
-        }else{
-            //전위
-            DFS(root.lt);
-            //중위
-            DFS(root.rt);
-            //후위
-        }
+//        if(root == null){
+//            return;
+//        }else{
+//            //전위
+//            DFS(root.lt);
+//            //중위
+//            DFS(root.rt);
+//            //후위
+//        }
     }
 
 

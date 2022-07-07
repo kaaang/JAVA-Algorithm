@@ -8,13 +8,11 @@ public class Main {
     public int solution(String check, String str){
         int answer = 0;
 
-        check = check.toLowerCase(Locale.ROOT);
         str = str.toLowerCase(Locale.ROOT);
+        int charCheck = check.toLowerCase(Locale.ROOT).charAt(0);
 
-        char tmp = check.charAt(0);
-
-        for(char c : str.toCharArray()){
-            if(tmp == c){
+        for(char x : str.toCharArray()){
+            if(x == charCheck){
                 answer++;
             }
         }

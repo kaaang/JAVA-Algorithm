@@ -8,22 +8,7 @@ public class Main {
     public int solution(String str){
         int answer = 0;
 
-        Stack<Character> stack = new Stack<>();
-        int cnt = 0;
 
-        for(int i=0;i<str.length();i++){
-            if(str.charAt(i) == '('){
-                stack.push('(');
-            }else{
-                stack.pop();
-                if(str.charAt(i-1) == '('){
-                    cnt += stack.size();
-                }else{
-                    cnt++;
-                }
-            }
-        }
-        answer = cnt;
 
         return answer;
     }

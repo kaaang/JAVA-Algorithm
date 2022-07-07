@@ -4,16 +4,10 @@ import java.util.*;
 
 public class Main {
 
-
-    public int DFS(int n){
-        if(n == 1){
-            return 1;
-        }else if(n == 2){
-            return 1;
-        }else{
-            return DFS(n-2) + DFS(n-1);
-        }
-    }
+//
+//    public int DFS(int n){
+//
+//    }
 
 
     public static void main(String[] args) {
@@ -21,7 +15,7 @@ public class Main {
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         for(int i=1;i<=n;i++){
-            System.out.print(T.DFS(i) + " ");
+//            System.out.print(T.DFS(i) + " ");
         }
     }
 

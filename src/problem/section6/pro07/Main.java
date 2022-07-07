@@ -32,15 +32,7 @@ public class Main {
 
         int n = kb.nextInt();
 
-        ArrayList<Point> p = new ArrayList<>();
-        for(int i=0;i<n;i++){
-            p.add(new Point(kb.nextInt(), kb.nextInt()));
-        }
-        Collections.sort(p);
 
-        for(Point x : p){
-            System.out.println(x.x+" "+x.y);
-        }
     }
 
 

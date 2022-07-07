@@ -7,16 +7,7 @@ public class Main {
 
     public String solution(String str1, String str2){
         String answer = "YES";
-        Queue<Character> q = new LinkedList<>();
-        for(char x : str1.toCharArray()) q.offer(x);
-        for(char x : str2.toCharArray()){
-            if(q.contains(x)){
-                if(x != q.poll()){
-                    return "NO";
-                }
-            }
-        }
-        if(!q.isEmpty()) return "NO";
+
 
         return answer;
     }

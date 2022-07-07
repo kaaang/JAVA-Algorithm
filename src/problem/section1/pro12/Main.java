@@ -7,13 +7,13 @@ public class Main {
     public String solution(int n, String str){
         String answer = "";
 
-        str = str.replace('#','1').replace('*','0');
+        str = str.replace("#","1");
+        str = str.replace("*","0");
 
-        for(int i=0;i<n;i++){
+        while (str.length()>1){
             String check = str.substring(0,7);
-            answer += (char) Integer.parseInt(check, 2);
+            answer+= (char) Integer.parseInt(check,2);
             str = str.substring(7);
-
         }
 
         return answer;

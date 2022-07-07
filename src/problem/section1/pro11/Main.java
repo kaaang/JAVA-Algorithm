@@ -5,24 +5,30 @@ import java.util.*;
 public class Main {
 
 
-    //TODO
-
     public String solution(String s){
         String answer = "";
 
-        s = s+" ";
-        int cnt = 1;
+        answer += s.charAt(0);
 
-        for(int i=0;i<s.length()-1;i++){
-            if(s.charAt(i) == s.charAt(i+1)){
-                cnt++;
+        int count = 1;
+
+        for(int i=1;i<s.length();i++){
+            if(s.charAt(i-1) == s.charAt(i)){
+                count++;
             }else{
-                answer += s.charAt(i);
-                if(cnt > 1){
-                    answer += String.valueOf(cnt);
+                if(count > 1){
+                    answer+=""+count;
+                    answer+=s.charAt(i);
+                    count = 1;
+                }else{
+                    answer+=s.charAt(i);
+                    count = 1;
                 }
-                cnt = 1;
             }
+        }
+
+        if(count > 1){
+            answer+=""+count;
         }
 
         return answer;

@@ -8,15 +8,7 @@ public class Main {
     public int[] solution(int n, int[] arr){
         int[] answer = new int[n];
 
-        for(int i=0;i<n;i++){
-            int score = 1;
-            for(int j=0;j<n;j++){
-                if(arr[i] < arr[j]){
-                    score++;
-                }
-            }
-            answer[i] = score;
-        }
+
 
         return answer;
     }

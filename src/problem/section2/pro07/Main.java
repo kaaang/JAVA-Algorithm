@@ -8,15 +8,7 @@ public class Main {
     public int solution(int n, int[] arr){
         int answer = 0;
 
-        int count = 0;
-        for(int x : arr){
-            if(x == 1){
-                count++;
-                answer += count;
-            }else{
-                count = 0;
-            }
-        }
+
 
         return answer;
     }

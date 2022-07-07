@@ -8,28 +8,7 @@ public class Main {
     public int solution(int n, int[][] arr, int m, int[] moves){
         int answer = 0;
 
-        Stack<Integer> stack = new Stack<>();
 
-        for(int i=0;i<m;i++){
-            int row = moves[i];
-            for(int j=1;j<=n;j++){
-                if(arr[j][row]>0){
-                    if(!stack.isEmpty()){
-                        if(stack.peek() == arr[j][row]){
-                            stack.pop();
-                            answer++;
-                            answer++;
-                        }else{
-                            stack.push(arr[j][row]);
-                        }
-                    }else{
-                        stack.push(arr[j][row]);
-                    }
-                    arr[j][row] = 0;
-                    break;
-                }
-            }
-        }
 
         return answer;
     }

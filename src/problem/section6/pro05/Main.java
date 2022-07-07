@@ -8,14 +8,7 @@ public class Main {
     public char solution(int n, int[] arr){
         char answer = 'U';
 
-        HashMap<Integer, Integer> h = new HashMap<>();
 
-        for(int x : arr){
-            h.put(x, h.getOrDefault(x, 0)+1);
-            if(h.get(x) > 1){
-                return 'D';
-            }
-        }
 
         return answer;
     }

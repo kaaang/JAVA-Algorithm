@@ -6,12 +6,16 @@ public class Main {
 
 
     public int solution(String str){
-        int answer = 0;
+        String answer = "";
 
-        str = str.replaceAll("[^0-9]","");
-        answer = Integer.parseInt(str);
+        for(char x : str.toCharArray()){
+            if(Character.isDigit(x)){
+                answer+=x;
+            }
+        }
 
-        return answer;
+
+        return Integer.parseInt(answer);
     }
 
 

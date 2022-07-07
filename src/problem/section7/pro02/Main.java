@@ -6,12 +6,7 @@ public class Main {
 
 
     public void solution(int n){
-        if(n == 0){
-            return;
-        }else{
-            solution(n/2);
-            System.out.println(n%2);
-        }
+
     }
 
 

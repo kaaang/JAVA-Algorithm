@@ -8,20 +8,7 @@ public class Main {
     public int solution(int n, int m , int[] arr){
         int answer = 0;
 
-        int sum = 0;
-        int lt = 0;
-        for(int rt=0;rt<n;rt++){
-            sum+=arr[rt];
-            if(sum == m){
-                answer++;
-            }
-            while (sum>=m){
-                sum-=arr[lt++];
-                if(sum==m){
-                    answer++;
-                }
-            }
-        }
+
 
         return answer;
     }
