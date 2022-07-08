@@ -7,8 +7,14 @@ public class Main {
 
     public int solution(int n, int[] arr){
         int answer = 1;
+        int max = arr[0];
 
-
+        for(int i=1;i<arr.length;i++){
+            if(arr[i] > max){
+                answer++;
+                max = arr[i];
+            }
+        }
 
 
         return answer;

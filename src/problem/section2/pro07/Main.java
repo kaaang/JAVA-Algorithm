@@ -8,7 +8,14 @@ public class Main {
     public int solution(int n, int[] arr){
         int answer = 0;
 
-
+        int cnt = 1;
+        for(int i=0;i<n;i++){
+            if(arr[i] == 1){
+                answer+=cnt++;
+            }else{
+                cnt = 1;
+            }
+        }
 
         return answer;
     }

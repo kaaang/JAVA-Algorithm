@@ -2,7 +2,7 @@ package problem.section1.pro06;
 
 import java.util.*;
 
-public class Main {
+public class  Main {
 
 
     public LinkedHashSet<Character> solution(String str){

@@ -2,7 +2,7 @@ package problem.section2.pro12;
 
 import java.util.*;
 
-public class Main {
+public class MainR {
 
 
     public int solution(int n, int m, int[][] arr){
@@ -15,7 +15,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Main T = new Main();
+        MainR T = new MainR();
         Scanner kb = new Scanner(System.in);
 
         int n = kb.nextInt();
