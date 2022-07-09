@@ -8,7 +8,26 @@ public class Main {
     public ArrayList<Integer> solution(int n, int[] a, int m , int[] b){
         ArrayList<Integer> answer = new ArrayList<>();
 
+        Arrays.sort(a);
+        Arrays.sort(b);
 
+        int p1 = 0;
+        int p2 = 0;
+
+        while (p1<n && p2<m){
+            if(a[p1]<b[p2]){
+                p1++;
+            }else if(a[p1]>b[p2]){
+                p2++;
+            }else{
+                answer.add(a[p1]);
+                p1++;
+                p2++;
+            }
+            if(p1 == n && p2 == m){
+                break;
+            }
+        }
 
         return answer;
     }

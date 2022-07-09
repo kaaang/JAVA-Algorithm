@@ -1,8 +1,8 @@
-package problem.section2.pro12;
+package problem.section2.pro12R;
 
 import java.util.*;
 
-public class MainR {
+public class Main {
 
 
     public int solution(int n, int m, int[][] arr){
@@ -15,7 +15,7 @@ public class MainR {
 
 
     public static void main(String[] args) {
-        MainR T = new MainR();
+        Main T = new Main();
         Scanner kb = new Scanner(System.in);
 
         int n = kb.nextInt();

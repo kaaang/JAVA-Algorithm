@@ -9,7 +9,19 @@ public class Main {
         int answer = 0;
         int sum = 0;
 
+        for(int i=0;i<k-1;i++){
+            sum = sum+arr[i];
+        }
 
+        int lt = 0;
+        for(int i=k-1;i<n;i++){
+            sum+=arr[i];
+            if(answer<sum){
+                answer = sum;
+            }
+            sum-=arr[lt];
+            lt++;
+        }
 
 
         return answer;

@@ -8,7 +8,23 @@ public class Main {
     public int solution(int n, int m , int[] arr){
         int answer = 0;
 
+        int sum = 0;
 
+        int lt = 0;
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+            if(sum == m){
+                answer++;
+            }else if(sum>m){
+                while (sum>=m){
+                    sum-=arr[lt];
+                    lt++;
+                    if(sum == m){
+                        answer++;
+                    }
+                }
+            }
+        }
 
         return answer;
     }
