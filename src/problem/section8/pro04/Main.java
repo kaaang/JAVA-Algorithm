@@ -6,9 +6,7 @@ public class Main {
 
 
 
-    public void DFS(int L){
 
-    }
 
 
     public static void main(String[] args) {

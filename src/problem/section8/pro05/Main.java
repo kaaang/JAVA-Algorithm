@@ -6,15 +6,11 @@ public class Main {
 
 
 
-    public void DFS(int L, int sum, int[] arr){
-
-
-    }
-
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
+
 
     }
 
