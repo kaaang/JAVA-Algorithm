@@ -5,21 +5,13 @@ import java.util.*;
 public class Main {
 
 
-    public String solution(String str1, String str2){
-        String answer = "YES";
-
-
-        return answer;
-    }
 
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
 
-        String str1 = kb.next();
-        String str2 = kb.next();
-        System.out.println(T.solution(str1, str2));
+
     }
 
 
