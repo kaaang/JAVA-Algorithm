@@ -12,8 +12,6 @@ public class Main {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
 
-//        n = kb.nextInt();
-//        System.out.println(T.solution(n));
 
     }
 

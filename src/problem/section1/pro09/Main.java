@@ -8,8 +8,6 @@ public class Main {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
 
-        String str = kb.next().toLowerCase(Locale.ROOT).replaceAll("[^0-9]","");
-        System.out.println(Integer.parseInt(str));
 
     }
 
