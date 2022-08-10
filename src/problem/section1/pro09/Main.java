@@ -9,6 +9,16 @@ public class Main {
         Scanner kb = new Scanner(System.in);
 
 
+        String str = kb.next();
+        String tmp = "";
+        for (char x : str.toCharArray()) {
+            if(Character.isDigit(x)){
+                tmp += x;
+            }
+        }
+
+        System.out.println(Integer.parseInt(tmp));
+
     }
 
 
