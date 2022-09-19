@@ -11,9 +11,15 @@ public class Main {
 
         String str = kb.nextLine().toLowerCase(Locale.ROOT);
         char x = kb.next().toLowerCase(Locale.ROOT).charAt(0);
+//
+//        for (char c : str.toCharArray()) {
+//            if(x == c){
+//                answer++;
+//            }
+//        }
 
-        for (char c : str.toCharArray()) {
-            if(x == c){
+        for (int i = 0; i < str.toCharArray().length; i++) {
+            if(x == str.toCharArray()[i]){
                 answer++;
             }
         }
